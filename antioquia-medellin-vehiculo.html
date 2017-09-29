@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard Bancaseguros</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+   
+
+  function myFunction() {
+    var dpto = document.getElementById("sel1");
+    var dptoTXT = dpto.options[dpto.selectedIndex].text;
+    var ciud = document.getElementById("sel2");
+    var ciudTXT = ciud.options[ciud.selectedIndex].text;
+
+    if (dptoTXT === "Antioquia" && ciudTXT === "Medellin") {
+        location.href='antioquia-medellin-davida.html';
+    } 
+  }
+  </script>
+
+
+
+
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 700px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #ed1c27;
+      height: 100%;
+      }
+
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    .btn-info{
+      background-color: #595959;
+      border-color: #595959;
+    }
+
+    .btn-info:hover {
+    background-color: #a6a6a6; 
+    border-color: #a6a6a6;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav-fixed {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <br>
+      <img src="logo.png">
+      <br><br><br><br><br><br>
+
+        <div class="form-group">
+        <label for="sel1">Seleccione Departamento:</label>
+        <select class="form-control" id="sel1">
+        	<option>Todos</option>
+    		<option selected>Antioquia</option>
+  	</select>
+	</div>
+
+        <div class="form-group">
+        <label for="sel1">Seleccione Ciudad:</label>
+        <select class="form-control" id="sel2">
+        	<option>Todos</option>
+    		<option selected>Medellin</option>
+  	</select>
+	</div>
+  
+        <div class="form-group">
+        <label for="sel1">Seleccione Oficina:</label>
+        <select class="form-control" id="sel3">
+        	<option selected>Todos</option>
+    		<option>Oficina A</option>
+  	</select>
+	</div>
+        <br> 
+
+
+        <button class="btn btn-info" onclick="myFunction()">Buscar</button>
+
+
+    </div>
+
+    <div class="col-sm-9">
+
+      <ul class="nav nav-tabs">
+      <li><a href="antioquia-medellin-davida.html">Davida</a></li>
+      <li class="active"><a href="antioquia-medellin-vehiculo.html">D. Vehiculo</a></li>
+      <li><a href="antioquia-medellin-libranza.html">D. Libranza</a></li>
+      <li><a href="antioquia-medellin-hipotecario.html">D. Hipotecario</a></li>
+      <li><a href="antioquia-medellin-fijo.html">D. Fijo</a></li>
+      </ul>
+
+
+      <div class="row">
+      <div class="col">
+      <div align="middle"><iframe width="50%" height="330" align="left" frameborder="0" scrolling="no" src="http://plot.ly/~isabelVera/8.embed?link=false"></iframe></div></div>
+      <div class="col">
+      <div align="middle"><iframe width="50%" height="330" align="right" frameborder="0" scrolling="no" src="http://plot.ly/~isabelVera/22.embed?link=false"></iframe></div></div></div>
+      
+
+      <div class="row">
+      <div class="col">
+      <div align="middle"><iframe width="50%" height="330" align="left" frameborder="0" scrolling="no" src="http://plot.ly/~isabelVera/30.embed?link=false"></iframe></div></div>
+      <div class="col">
+      <div align="middle"><iframe width="50%" height="330" align="right" frameborder="0" scrolling="no" src="http://plot.ly/~isabelVera/38.embed?link=false"></iframe></div></div></div>
+      
+
+    </div>  
+  </div> 
+</div>
+
+
+</body>
+</html>
